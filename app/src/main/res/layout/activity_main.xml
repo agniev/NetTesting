@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="agniev.nettesting.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+            <Button
+                android:id="@+id/btnTypeOfMeasure"
+                android:text="Уровень сигнала"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/btnPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сигнал"
+                android:layout_weight="1"
+                />
+    </LinearLayout>
+
+    <agniev.nettesting.GraphicsView
+        android:id="@+id/toSeePlan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/linearLayout2"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:id="@+id/raduga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ryg"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnMeasurement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Позиция"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
